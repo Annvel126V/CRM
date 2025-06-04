@@ -1,4 +1,4 @@
-import { headers } from 'next/headers';
+import { headers, type UnsafeUnwrappedHeaders } from 'next/headers';
 import React from 'react';
 
 export interface ServerComponentProps {
@@ -9,7 +9,7 @@ export default function ServerComponentCopy({
   children,
 }: ServerComponentProps) {
   console.log('Server Component Copy');
-  console.log(headers());
+  console.log((headers() as unknown as UnsafeUnwrappedHeaders));
 
   return (
     <div>
