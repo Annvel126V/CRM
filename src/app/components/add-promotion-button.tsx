@@ -8,7 +8,7 @@ export interface AddPromotionButtonProps {
   companyId: string;
 }
 
-export default function AddCompanyButton({
+export default function AddPromotionButton({
   companyId,
 }: AddPromotionButtonProps) {
   const router = useRouter();
