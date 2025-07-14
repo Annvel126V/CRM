@@ -39,7 +39,7 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
             <InputField label="Country" placeholder="Country" name="country" />
           </div>
           <div className="flex flex-col flex-1 gap-5">
-            <InputField label="Name" placeholder="Name" />
+            <InputField label="Name" placeholder="Name" name="name" />
             <InputField
               label="Category"
               placeholder="Category"
