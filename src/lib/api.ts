@@ -37,7 +37,7 @@ export interface Company {
   status: CompanyStatus;
   joinedDate: string;
   hasPromotions: boolean;
-  categoruId: string;
+  categoryId: string;
   categoryTitle: string;
   countryId: string;
   countryTitle: string;
@@ -83,7 +83,7 @@ export const getCountries = (init?: RequestInit) => {
 };
 
 export const getCategories = (init?: RequestInit) => {
-  return sendRequest<Category[]>(buildUrl('categoies'), init);
+  return sendRequest<Category[]>(buildUrl('categories'), init);
 };
 
 export const getCompanies = (init?: RequestInit) => {

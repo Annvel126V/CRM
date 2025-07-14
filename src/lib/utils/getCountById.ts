@@ -10,4 +10,5 @@ const getCountById = <T extends string, I extends Record<T, string>>(
     },
     {} as Record<string, number>,
   );
+
 export default getCountById;
