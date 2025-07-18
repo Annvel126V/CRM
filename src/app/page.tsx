@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col min-h-full">
       <header className="bg-gray-900 text-white font-semibold text-lg min-h-18 px-4 py-4 flex items-center justify-center">
         <div className="flex items-center gap-2">
-          <Image width={122} height={24} src="/icons.logo.svg" alt="logo" />
+          <Image width={122} height={24} src="/icons/logo.svg" alt="logo" />
           <span>|</span>
           <span>CRM for Vendors</span>
         </div>

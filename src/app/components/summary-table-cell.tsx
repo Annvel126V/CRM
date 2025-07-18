@@ -7,7 +7,7 @@ export interface SummaryTableCellProps {
 }
 
 export default function SummaryTableCell({
-  align,
+  align = 'left',
   children,
 }: SummaryTableCellProps) {
   return (
