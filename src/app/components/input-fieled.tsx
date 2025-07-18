@@ -8,11 +8,14 @@ export interface InputFieldProps
   label?: string;
   as?: 'input' | 'select' | 'textarea';
   children?: React.ReactNode;
+  name: string;
+  id?: string;
 }
 
 export default function InputField({
   label,
   id,
+  name,
   as = 'input',
   children,
   ...rest
@@ -20,15 +23,19 @@ export default function InputField({
   return (
     <div className="flex flex-col">
       {label && (
-        <label htmlFor={id} className="mb-2 text-base color-gray-900">
+        <label htmlFor={id || name} className="mb-2 text-base text-gray-900">
           {label}
         </label>
       )}
       <Field
-        {...rest}
-        id={id}
+        as={as}
+        name={name}
+        id={id || name}
         className="p-3 h-11 text-sm rounded border border-gray-300 shadow"
-      />
+        {...rest}
+      >
+        {children}
+      </Field>
     </div>
   );
 }
