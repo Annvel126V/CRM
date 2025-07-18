@@ -8,7 +8,7 @@ import getCountById from '@/lib/utils/getCountById';
 export default async function Page() {
   const countries = await getCountries();
   const companies = await getCompanies();
-  const counts = await getCountById(companies, 'countryId');
+  const counts = getCountById(companies, 'countryId');
 
   return (
     <DashboardCard label="Countries of companies">
