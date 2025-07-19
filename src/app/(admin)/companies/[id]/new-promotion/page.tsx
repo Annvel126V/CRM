@@ -3,6 +3,8 @@
 import React from 'react';
 import PromotionForm from '@/app/components/promotion-from';
 
+export const dynamic = 'force-dynamic';
+
 export interface PageProps {
   params: { id: string };
 }

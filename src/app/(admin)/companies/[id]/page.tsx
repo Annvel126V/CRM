@@ -6,6 +6,8 @@ import getQueryClient from '@/lib/utils/getQueryClient';
 import CompanyInfo from '@/app/components/company-info';
 import CompanyPromotions from '@/app/components/company-promotions';
 
+export const dynamic = 'force-dynamic';
+
 export interface PageProps {
   params: { id: string };
 }
