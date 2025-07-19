@@ -91,7 +91,6 @@ export const getCompanies = (init?: RequestInit) => {
 };
 
 export const getCompany = (id: string, init?: RequestInit) => {
-  if (!id) throw new Error('Missing company ID');
   return sendRequest<Company>(buildUrl('companies', id), init);
 };
 
