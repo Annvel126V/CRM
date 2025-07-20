@@ -8,10 +8,6 @@ export interface PageProps {
 }
 
 export default async function Page({ params }: PageProps) {
-  if (!params.id) {
-    throw new Error('Missing company ID');
-  }
-
   const queryClient = getQueryClient();
 
   await queryClient.prefetchQuery({
@@ -20,13 +16,7 @@ export default async function Page({ params }: PageProps) {
     staleTime: 10 * 1000,
   });
 
-  const company = queryClient.getQueryData(['companies', params.id]) as
-    | Company
-    | undefined;
+  const company = queryClient.getQueryData(['companies', params.id]) as Company;
 
-  if (!company) {
-    throw new Error(`Company with id ${params.id} not found`);
-  }
-
-  return <Header>{company.title}</Header>;
+  return <Header>{company?.title}</Header>;
 }
