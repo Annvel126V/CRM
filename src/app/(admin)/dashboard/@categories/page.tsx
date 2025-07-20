@@ -7,6 +7,7 @@ import DashboardCard from '@/app/components/dashboard-card';
 export default async function Page() {
   const categories = await getCategories();
   const companies = await getCompanies();
+
   const counts = getCountById(companies, 'categoryId');
 
   return (
